@@ -597,7 +597,7 @@ int cg_migrate(
                         return ret;
                 }
 
-                while ((r = cg_read_pid(f, &pid)) > 0) {
+                while ((r = cg_read_pid(f, &pid, flags)) > 0) {
 
                         /* This might do weird stuff if we aren't a
                          * single-threaded program. However, we
